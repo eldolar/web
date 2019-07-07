@@ -1,0 +1,28 @@
+.loadingBox {
+  background-color: #ffffff;
+  animation-name: animate; 
+  animation-duration: 2s; 
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes animate {
+  from {
+    transition: none;
+  }
+  to {
+    background-color: #976DD0;
+    transition: all 0.1s ease-out; 
+  }
+}
+
+.loadingBox h1 {
+  text-align: center;
+  color: #ffffff
+}
+
+.bankList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
