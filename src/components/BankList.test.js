@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import BankList from './BankList';
+import { BankList } from './BankList';
 import { defaultBanks } from './BankList.stories';
 
 it('renders out each bank', () => {

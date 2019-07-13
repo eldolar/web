@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import BankList from './BankList';
+import { BankList } from './BankList';
 import { bank, bankNoData } from './Bank.stories'
 
 export const defaultBanks = [

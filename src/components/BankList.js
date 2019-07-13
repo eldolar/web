@@ -2,8 +2,9 @@ import React from 'react';
 import Bank from './Bank';
 import PropTypes from 'prop-types';
 import styles from '../styles/BankList.module.css';
+import { connect } from 'react-redux';
 
-export default function BankList({ loading, banks}) {
+export function BankList({ loading, banks }) {
   if (loading) {
     return(
       <div className={styles.loadingBox}>
@@ -31,3 +32,20 @@ BankList.propTypes = {
 BankList.defaultProps = {
   loading: false,
 };
+
+// react-redux
+const mapStateToProps = state => {
+  return {
+    loading: state.loading,
+    banks: state.banks
+  }
+}
+
+const mapDispatchToProps = () => {
+  return {}
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(BankList);
