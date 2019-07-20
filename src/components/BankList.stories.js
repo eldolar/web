@@ -12,6 +12,6 @@ export const defaultBanks = [
 ]
 
 storiesOf('BankList', module)
-  .add('default', () => <BankList banks={defaultBanks} />)
-  .add('loading', () => <BankList loading banks={[]} />)
-  .add('empty', () => <BankList banks={[]} />)
+  .add('default', () => <BankList banks={defaultBanks} fetchBanks={ () => [] } />)
+  .add('loading', () => <BankList loading banks={[]} fetchBanks={ () => [] } />)
+  .add('empty', () => <BankList banks={[]} fetchBanks={ () => [] } />)

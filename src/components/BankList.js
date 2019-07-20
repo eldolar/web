@@ -3,16 +3,20 @@ import Bank from './Bank';
 import PropTypes from 'prop-types';
 import styles from '../styles/BankList.module.css';
 import { connect } from 'react-redux';
+import { fetchBanks } from './../lib/actions/banks'
 
 export class BankList extends React.Component {
-  constructor (props) {
-    super(props)
+  state = { loading: false, banks: [] }
 
-    this.state = { loading: false, banks: [] }
+  componentDidMount () {
+    if (this.props.banks.length === 0)
+      this.props.fetchBanks()
   }
 
   render () {
-    if (this.props.loading) {
+    const { loading, banks } = this.props
+
+    if (loading) {
       return(
         <div className={styles.loadingBox}>
           <h1>Cargando</h1>
@@ -20,13 +24,13 @@ export class BankList extends React.Component {
       )
     }
 
-    if (this.props.banks.length === 0) {
+    if (banks.length === 0) {
       return <h1>No hay información</h1>
     }
 
     return (
       <div className={styles.bankList}>
-        { this.props.banks.map( (bank, index) => <Bank key={index} bank={bank} />) }
+        { banks.map( (bank, index) => <Bank key={index} bank={bank} />) }
       </div>
     );
   }
@@ -49,8 +53,10 @@ const mapStateToProps = state => {
   }
 }
 
-const mapDispatchToProps = () => {
-  return {}
+const mapDispatchToProps = dispatch => {
+  return {
+    fetchBanks: () => { dispatch( fetchBanks() ) },
+  }
 }
 
 export default connect(
