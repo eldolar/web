@@ -1,7 +1,7 @@
 import React from 'react';
 import Bank from './Bank';
 import PropTypes from 'prop-types';
-import styles from '../styles/BankList.module.css';
+import styles from '../styles/BankList.module.scss';
 
 function BankList({ loading, banks }) {
   if (loading) {

@@ -1,23 +1,26 @@
+@import "./variables.scss";
+
 .loadingBox {
-  background-color: #ffffff;
+  background-color: #ffff;
   animation-name: animate; 
   animation-duration: 2s; 
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
+
 @keyframes animate {
   from {
     transition: none;
   }
   to {
-    background-color: #976DD0;
+    background-color: $light-text-default;
     transition: all 0.1s ease-out; 
   }
 }
 
 .loadingBox h1 {
   text-align: center;
-  color: #ffffff
+  color: #fff;
 }
 
 .bankList {
