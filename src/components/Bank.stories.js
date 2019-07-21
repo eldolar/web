@@ -6,16 +6,15 @@ import Bank from './Bank';
 export const bank = {
   name: 'Santander Rio',
   buy: '40.56',
-  sell: '43.04',
-  updatedAt: new Date(2018, 0, 1, 9, 0)
+  sell: '43.04'
 };
 
-export const bankNoData = {
-  name: 'Santander Rio',
-  buy: '',
-  sell: ''
-};
+const zeroBank = Object.assign({}, bank, { buy: '0', sell: '0' });
+const naBank = Object.assign({}, bank, { buy: 'N/A', sell: 'N/A' });
+export const bankNoData = Object.assign({}, bank, { buy: '', sell: '' });
 
 storiesOf('Bank', module)
   .add('default', () => <Bank bank={bank} />)
+  .add('zero', () => <Bank bank={zeroBank} />)
+  .add('naBank', () => <Bank bank={naBank} />)
   .add('no-data', () => <Bank bank={bankNoData} />)

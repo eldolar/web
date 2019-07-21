@@ -8,8 +8,8 @@
 
   &:hover, 
   &:active {
-    box-shadow: 0 4px 8px rgba($light-shadow, .06);
-    transition: box-shadow .25s linear, -webkit-box-shadow .25s linear;
+    box-shadow: 0 10px 20px rgba($light-shadow, .08);
+    transition: box-shadow .25s linear, box-shadow .25s linear;
   }
 }
 
@@ -28,4 +28,9 @@
   display: block;
   color: $light-number-default;
   text-align: center;
+}
+
+.no_data {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
