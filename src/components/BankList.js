@@ -32,4 +32,5 @@ BankList.propTypes = {
 
 BankList.defaultProps = {
   loading: false,
+  banks: []
 };

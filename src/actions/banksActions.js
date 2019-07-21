@@ -7,10 +7,11 @@ export const fetchBanksBegin = () => ({
   type: FETCH_BANKS_BEGIN
 });
 
-export const fetchBanksSuccess = banks => {
+export const fetchBanksSuccess = data => {
   return {
     type: FETCH_BANKS_SUCCESS,
-    banks
+    banks: data.banks,
+    updatedAt: data.createdAt
   }
 }
 

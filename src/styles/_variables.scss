@@ -4,3 +4,9 @@
 $light-text-default: #976DD0;
 $light-number-default: #5A6978;
 $light-shadow: #031b4e;
+
+// shared
+%link-base {
+  text-decoration: none;
+  color: $light-text-default;
+}

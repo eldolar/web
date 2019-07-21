@@ -22,8 +22,8 @@ function* fetchBanksAsync () {
       bank.sell = bank.sell['$numberDecimal']
       bank.buy = bank.buy['$numberDecimal']
     });
-
-    yield put (fetchBanksSuccess(data.banks))
+    data.createdAt = new Date(data.createdAt).toString()
+    yield put (fetchBanksSuccess(data))
   } catch (error) {
     yield put (fetchBanksFailure())
   }

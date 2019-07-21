@@ -4,7 +4,7 @@ import {
   FETCH_BANKS_FAILURE
 } from './../actions/banksActions';
 
-const initialState = { banks: [], loading: false };
+const initialState = { banks: [], loading: false, updatedAt: ''};
 
 export const reducer = (state = initialState, action) => {
   switch(action.type) {
@@ -22,7 +22,8 @@ export const reducer = (state = initialState, action) => {
       return {
         ...state,
         loading: false,
-        banks: action.banks
+        banks: action.banks,
+        updatedAt: action.updatedAt
       };
 
     case FETCH_BANKS_FAILURE:

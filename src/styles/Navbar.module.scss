@@ -1,0 +1,29 @@
+@import "./variables.scss";
+
+nav.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+  
+  p:first-child {
+    display: inline-block;
+    color: $light-number-default;
+    
+    span {
+      color: $light-text-default;
+    }
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+    li a {
+      @extend %link-base;
+      display: inline-block;
+      padding-right: 10px;
+    }
+  }
+}
