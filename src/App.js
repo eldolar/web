@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import BankList from './containers/BankListContainer';
 import Footer from './components/Footer'
@@ -24,7 +24,7 @@ function App() {
 
 function Home() {
   return (
-    <div className="App">
+    <div className="content">
       <BankList />
     </div>
   );
