@@ -4,7 +4,7 @@ import {
   fetchBanksBegin,
   fetchBanksSuccess,
   fetchBanksFailure
-} from '../actions/banks'
+} from '../actions/banksActions'
 
 export function* watchFetchBanks() {
   yield takeLatest(FETCH_BANKS, fetchBanksAsync);
@@ -22,7 +22,7 @@ function* fetchBanksAsync () {
       bank.sell = bank.sell['$numberDecimal']
       bank.buy = bank.buy['$numberDecimal']
     });
-    
+
     yield put (fetchBanksSuccess(data.banks))
   } catch (error) {
     yield put (fetchBanksFailure())

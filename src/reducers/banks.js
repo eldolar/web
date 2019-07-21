@@ -2,9 +2,8 @@ import {
   FETCH_BANKS_BEGIN,
   FETCH_BANKS_SUCCESS,
   FETCH_BANKS_FAILURE
-} from './../actions/banks';
+} from './../actions/banksActions';
 
-// reducer - this could be in another file.
 const initialState = { banks: [], loading: false };
 
 export const reducer = (state = initialState, action) => {

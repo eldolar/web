@@ -3,7 +3,7 @@ import Bank from './Bank';
 import PropTypes from 'prop-types';
 import styles from '../styles/BankList.module.css';
 import { connect } from 'react-redux';
-import { fetchBanks } from './../lib/actions/banks'
+import { fetchBanks } from './../actions/banksActions';
 
 export class BankList extends React.Component {
   state = { loading: false, banks: [] }
