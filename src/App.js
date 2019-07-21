@@ -1,40 +1,27 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 import BankList from './containers/BankListContainer';
-import Footer from './components/Footer'
 import Navbar from './containers/NavbarContainer'
+import Footer from './components/Footer'
+import About from './components/About'
 
 import './App.scss';
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <header>
         <Navbar />
       </header>
 
-      <Route exact path="/" component={Home} />
-      <Route path="/about" component={About} />
+      <section className="content">
+        <Route exact path="/" component={BankList} />
+        <Route path="/about" component={About} />
+      </section>
 
       <Footer />
-    </Router>
-  );
-}
-
-function Home() {
-  return (
-    <div className="content">
-      <BankList />
-    </div>
-  );
-}
-
-function About() {
-  return (
-    <div>
-      <h2>About</h2>
-    </div>
+    </BrowserRouter>
   );
 }
 
