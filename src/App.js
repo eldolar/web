@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import BankList from './components/BankList';
+import BankList from './containers/BankListContainer';
 
 // Move original App template to Home
 import './App.css';

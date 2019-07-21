@@ -20,7 +20,6 @@ export default function Bank({ bank: { name, sell, buy, updatedAt } }) {
   );
 }
 
-// specify the shape of data that it expects.
 Bank.propTypes = {
   bank: PropTypes.shape({
     name: PropTypes.string.isRequired,

@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import { BankList } from './BankList';
+import BankList from './BankList';
 import { bank, bankNoData } from './Bank.stories'
 
 export const defaultBanks = [
@@ -12,6 +12,6 @@ export const defaultBanks = [
 ]
 
 storiesOf('BankList', module)
-  .add('default', () => <BankList banks={defaultBanks} fetchBanks={ () => [] } />)
-  .add('loading', () => <BankList loading banks={[]} fetchBanks={ () => [] } />)
-  .add('empty', () => <BankList banks={[]} fetchBanks={ () => [] } />)
+  .add('default', () => <BankList banks={defaultBanks} />)
+  .add('loading', () => <BankList loading banks={[]} />)
+  .add('empty', () => <BankList banks={[]} />)
