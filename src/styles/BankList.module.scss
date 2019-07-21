@@ -1,7 +1,7 @@
 @import "./variables.scss";
 
 .loadingBox {
-  background-color: #ffff;
+  background-color: #fff;
   animation-name: animate; 
   animation-duration: 2s; 
   animation-iteration-count: infinite;
@@ -28,4 +28,8 @@
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
+}
+
+.no_data {
+  color: $light-number-default;
 }
