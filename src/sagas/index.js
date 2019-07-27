@@ -6,6 +6,8 @@ import {
   fetchBanksFailure
 } from '../actions/banksActions'
 
+const DOMAIN = "https://glacial-dusk-89024.herokuapp.com"
+
 export function* watchFetchBanks() {
   yield takeLatest(FETCH_BANKS, fetchBanksAsync);
 }
@@ -13,8 +15,8 @@ export function* watchFetchBanks() {
 function* fetchBanksAsync () {
   try {
     yield put (fetchBanksBegin())
-    const data = yield call ( () => 
-      fetch('/api/v1/exchanges/now', { mode: 'cors' })
+    const data = yield call ( () =>
+      fetch(`${DOMAIN}/api/v1/exchanges/now`)
         .then( res => res.json())
     )
     // sanitize data to match with Bank PropTypes
@@ -23,6 +25,7 @@ function* fetchBanksAsync () {
       bank.buy = bank.buy['$numberDecimal']
     });
     data.createdAt = new Date(data.createdAt).toString()
+
     yield put (fetchBanksSuccess(data))
   } catch (error) {
     yield put (fetchBanksFailure())
