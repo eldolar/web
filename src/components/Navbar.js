@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
+import Refresh from './RefreshBanks';
 import styles from '../styles/Navbar.module.scss';
 
 import PropTypes from 'prop-types';
@@ -9,6 +10,7 @@ const Navbar = ({ updatedAt }) => (
     <p>
       <span>Actualizado: </span>
       { updatedAt }
+      <Refresh />
     </p>
     <ul>
       <li>

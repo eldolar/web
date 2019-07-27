@@ -1,9 +1,13 @@
 import React from 'react'
-// import styles from '../styles/Footer.module.scss';
 
 const About = () => (
   <div>
-    <h2>About</h2>
+    <h2>
+      ~
+      <span role="img" aria-label="Man Technologist">👨🏼‍💻️</span>
+      ~
+    </h2>
+
   </div>
 )
 

@@ -10,3 +10,8 @@ $light-shadow: #031b4e;
   text-decoration: none;
   color: $light-text-default;
 }
+
+:export {
+  lighttextdefault: $light-text-default;
+  lightnumberdefault: $light-number-default;
+}
