@@ -25,6 +25,24 @@ const Footer = () => (
             icon="github" />
         </a>
       </li>
+      <li>
+        <a href="/">
+          <IcomoonReact
+            iconSet={iconSet}
+            color={base.lightnumberdefault}
+            size={25}
+            icon="android" />
+        </a>
+      </li>
+      <li>
+        <a href="/">
+          <IcomoonReact
+            iconSet={iconSet}
+            color={base.lightnumberdefault}
+            size={25}
+            icon="appleinc" />
+        </a>
+      </li>
 
     </ul>
   </footer>
