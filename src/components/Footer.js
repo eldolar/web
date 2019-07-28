@@ -8,10 +8,16 @@ const Footer = () => (
   <footer className={styles.footer}>
     <ul>
       <li>
-        <a href="/">Licencia</a>
+      <a href="https://twitter.com/edudepetris">
+          <IcomoonReact
+            iconSet={iconSet}
+            color={base.lightnumberdefault}
+            size={25}
+            icon="twitter" />
+        </a>
       </li>
       <li>
-        <a href="/">
+        <a href="https://github.com/edudepetris">
           <IcomoonReact
             iconSet={iconSet}
             color={base.lightnumberdefault}
