@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
-import Refresh from './RefreshBanks';
+import Refresh from '../containers/RefreshContainer';
 import styles from '../styles/Navbar.module.scss';
 
 import PropTypes from 'prop-types';

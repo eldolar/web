@@ -5,4 +5,3 @@ import RefreshBanks from './RefreshBanks';
 
 storiesOf('RefreshBanks', module)
   .add('default', () => <RefreshBanks />)
-  .add('active', () => <RefreshBanks />)
