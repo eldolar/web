@@ -17,7 +17,7 @@ const Footer = () => (
         </a>
       </li>
       <li>
-        <a href="https://github.com/edudepetris">
+        <a href="https://github.com/eldolar/web">
           <IcomoonReact
             iconSet={iconSet}
             color={base.number}
