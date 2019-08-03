@@ -4,6 +4,7 @@ import Refresh from '../containers/RefreshContainer';
 import styles from '../styles/Navbar.module.scss';
 
 import PropTypes from 'prop-types';
+import ToggleTheme from './ToggleTheme';
 
 const Navbar = ({ updatedAt }) => (
   <nav className={styles.navigation}>
@@ -11,6 +12,7 @@ const Navbar = ({ updatedAt }) => (
       <span>Actualizado: </span>
       { updatedAt }
       <Refresh />
+      <ToggleTheme />
     </p>
     <ul>
       <li>

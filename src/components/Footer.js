@@ -11,7 +11,7 @@ const Footer = () => (
       <a href="https://twitter.com/edudepetris">
           <IcomoonReact
             iconSet={iconSet}
-            color={base.lightnumberdefault}
+            color={base.number}
             size={25}
             icon="twitter" />
         </a>
@@ -20,7 +20,7 @@ const Footer = () => (
         <a href="https://github.com/edudepetris">
           <IcomoonReact
             iconSet={iconSet}
-            color={base.lightnumberdefault}
+            color={base.number}
             size={25}
             icon="github" />
         </a>
@@ -29,7 +29,7 @@ const Footer = () => (
         <a href="/">
           <IcomoonReact
             iconSet={iconSet}
-            color={base.lightnumberdefault}
+            color={base.number}
             size={25}
             icon="android" />
         </a>
@@ -38,7 +38,7 @@ const Footer = () => (
         <a href="/">
           <IcomoonReact
             iconSet={iconSet}
-            color={base.lightnumberdefault}
+            color={base.number}
             size={25}
             icon="appleinc" />
         </a>

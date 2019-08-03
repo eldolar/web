@@ -1,0 +1,32 @@
+@import "./variables.scss";
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: $bg;
+}
+
+html.theme-transition,
+html.theme-transition *,
+html.theme-transition *:before,
+html.theme-transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}
+
+#root {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+}
+
+.content {
+  margin: auto;
+}
+
+button.mode {
+  cursor: pointer;
+  border: 1px solid $text;
+  background-color: $bg;
+}

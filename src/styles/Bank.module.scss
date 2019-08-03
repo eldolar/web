@@ -1,12 +1,12 @@
 @import "./variables.scss";
 
 .box {
-  border: 1px solid $light-text-default;
+  border: 1px solid $text;
   padding: 10px;
   width: 250px;
   margin: 10px;
 
-  &:hover, 
+  &:hover,
   &:active {
     box-shadow: 0 10px 20px rgba($light-shadow, .08);
     transition: box-shadow .25s linear, box-shadow .25s linear;
@@ -14,7 +14,7 @@
 }
 
 .name {
-  color: $light-text-default;
+  color: $text;
   text-align: center;
   margin-bottom: 0;
 }
@@ -24,10 +24,14 @@
   justify-content: space-evenly;
 }
 
-.exchange p span {
-  display: block;
-  color: $light-number-default;
-  text-align: center;
+.exchange p {
+  color: $text-2;
+
+  span {
+    display: block;
+    color: $number;
+    text-align: center;
+  }
 }
 
 .no_data {

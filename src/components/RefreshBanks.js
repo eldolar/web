@@ -8,9 +8,8 @@ const RefreshBanks = ({ refresh }) => (
   <a href="/" onClick={ (event) => handleClick(event, refresh) }>
     <IcomoonReact
       iconSet={iconSet}
-      color={base.lighttextdefault}
+      color={base.text}
       size={16}
-      onClick={refresh}
       icon="loop2" />
   </a>
 )

@@ -13,7 +13,7 @@
     transition: none;
   }
   to {
-    background-color: $light-text-default;
+    background-color: $text;
     transition: all 0.1s ease-out; 
   }
 }
@@ -31,5 +31,5 @@
 }
 
 .no_data {
-  color: $light-number-default;
+  color: $number;
 }

@@ -1,17 +1,35 @@
-/* Fonts */
+html {
+  --bg: #fff;
+  --text: #976DD0;
+  --number: #5A6978;
+  --number-ligther: black;
+  --icon: #171717;
+}
+// dark theme
+html[data-theme="dark"] {
+  --bg: #171717;
+  --text: #976DD0;
+  --number: white;
+  --number-ligther: yellow;
+  --icon: #fff;
+}
 
 // Colors
-$light-text-default: #976DD0;
-$light-number-default: #5A6978;
+$bg: var(--bg);
+$text: var(--text);
+$number: var(--number);
 $light-shadow: #031b4e;
+$text-2: var(--number-ligther);
+$icon: var(--icon);
 
 // shared
 %link-base {
   text-decoration: none;
-  color: $light-text-default;
+  color: $text;
 }
 
 :export {
-  lighttextdefault: $light-text-default;
-  lightnumberdefault: $light-number-default;
+  text: $text;
+  number: $number;
+  iconcolor: $icon;
 }

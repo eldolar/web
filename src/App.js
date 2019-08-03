@@ -6,7 +6,7 @@ import Navbar from './containers/NavbarContainer'
 import Footer from './components/Footer'
 import About from './components/About'
 
-import './App.scss';
+import './styles/App.scss'
 
 function App() {
   return (
