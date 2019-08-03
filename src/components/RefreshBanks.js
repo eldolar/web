@@ -5,7 +5,7 @@ import base from './../styles/_variables.scss'
 import PropTypes from 'prop-types';
 
 const RefreshBanks = ({ refresh }) => (
-  <a href="" onClick={ (event) => handleClick(event, refresh) }>
+  <a href="/" onClick={ (event) => handleClick(event, refresh) }>
     <IcomoonReact
       iconSet={iconSet}
       color={base.lighttextdefault}

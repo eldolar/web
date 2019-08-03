@@ -23,8 +23,8 @@ export default function Bank({ bank: { name, sell, buy } }) {
 }
 
 function hasExchange(sell, buy) {
-  const noExchnage = (sell == '0' || buy == '0') ||
-    (sell == '' || buy == '') || (isNaN(sell) || isNaN(buy))
+  const noExchnage = (sell === '0' || buy === '0') ||
+    (sell === '' || buy === '') || (isNaN(sell) || isNaN(buy))
 
     if (noExchnage) {
       return false;
