@@ -1,5 +1,6 @@
 {
-  "name": "my-app",
+  "homepage": "https://eldolar.github.io/web",
+  "name": "web",
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:3000",
@@ -15,6 +16,8 @@
     "source-map-explorer": "^2.0.1"
   },
   "scripts": {
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -b gh-pages -d build --git $(which git)",
     "analyze": "source-map-explorer 'build/static/js/*.js'",
     "start-https": "HTTPS=true react-scripts start",
     "start": "react-scripts start",
@@ -40,6 +43,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^2.1.0",
     "@storybook/addon-actions": "^5.1.9",
     "@storybook/addon-links": "^5.1.9",
     "@storybook/addons": "^5.1.9",
