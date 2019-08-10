@@ -10,7 +10,7 @@ import './styles/App.scss'
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/web">
       <header>
         <Navbar />
       </header>

@@ -13,7 +13,8 @@ The most fancy 🧐 dollar exchanger in the 🌎.
 
 ---------
 
-El Dolar
+[El Dolar ↗](https://eldolar.github.io/web)
+
 --------
 
 #### Develop
@@ -32,9 +33,13 @@ Run StoryBook
 Build
 * ```$ yarn build```
 
-[**Deployed on https://zeit.co/now**](https://my-app.edudepetris.now.sh/)
+Deploy to Gh-Pages
+* ```$ yarn deploy```
 
 #### Extra
 - This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 - Full list of scripts [here](https://github.com/eldolar/web/blob/4f5db919fa79202cb93429140df02b13ce823a7d/package.json#L17)
+
+#### Troubleshooting
+- https://github.com/transitive-bullshit/react-modern-library-boilerplate/issues/15#issuecomment-372165120
