@@ -43,4 +43,4 @@ export const reducer = (state = initialState, action) => {
       // ALWAYS have a default case in a reducer
       return state;
   }
-}
+};

@@ -5,8 +5,8 @@ import Navbar from './../components/Navbar';
 const mapStateToProps = state => {
   return {
     updatedAt: state.updatedAt
-  }
-}
+  };
+};
 
 export default connect(
   mapStateToProps,

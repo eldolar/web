@@ -12,8 +12,8 @@ export const fetchBanksSuccess = data => {
     type: FETCH_BANKS_SUCCESS,
     banks: data.banks,
     updatedAt: data.createdAt
-  }
-}
+  };
+};
 
 export const fetchBanksFailure = error => ({
   type: FETCH_BANKS_FAILURE,
@@ -22,4 +22,4 @@ export const fetchBanksFailure = error => ({
 
 export const fetchBanks = () => ({
   type: FETCH_BANKS
-})
+});

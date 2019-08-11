@@ -8,7 +8,7 @@ const store = {
   dispatch: () => {},
   subscribe: () => {},
   getState: () => ({})
-}
+};
 
 storiesOf('RefreshBanks', module)
   .addDecorator(story => (
@@ -16,4 +16,4 @@ storiesOf('RefreshBanks', module)
       <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>
     </Provider>
   ))
-  .add('default', () => <RefreshBanks />)
+  .add('default', () => <RefreshBanks />);

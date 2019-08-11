@@ -1,14 +1,14 @@
-import React from 'react'
+import React from 'react';
 import styles from '../styles/Footer.module.scss';
-import iconSet from './../fonts/selection.json'
-import IcomoonReact from 'icomoon-react'
-import base from './../styles/_variables.scss'
+import iconSet from './../fonts/selection.json';
+import IcomoonReact from 'icomoon-react';
+import base from './../styles/_variables.scss';
 
 const Footer = () => (
   <footer className={styles.footer}>
     <ul>
       <li>
-      <a href="https://twitter.com/edudepetris">
+        <a href="https://twitter.com/edudepetris">
           <IcomoonReact
             iconSet={iconSet}
             color={base.number}
@@ -46,6 +46,6 @@ const Footer = () => (
 
     </ul>
   </footer>
-)
+);
 
-export default Footer
+export default Footer;

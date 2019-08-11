@@ -17,4 +17,4 @@ storiesOf('Bank', module)
   .add('default', () => <Bank bank={bank} />)
   .add('zero', () => <Bank bank={zeroBank} />)
   .add('naBank', () => <Bank bank={nanBank} />)
-  .add('no-data', () => <Bank bank={emptyBank} />)
+  .add('no-data', () => <Bank bank={emptyBank} />);

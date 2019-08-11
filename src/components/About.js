@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const About = () => (
   <div>
@@ -9,6 +9,6 @@ const About = () => (
     </h2>
 
   </div>
-)
+);
 
-export default About
+export default About;

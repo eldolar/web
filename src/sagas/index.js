@@ -4,9 +4,9 @@ import {
   fetchBanksBegin,
   fetchBanksSuccess,
   fetchBanksFailure
-} from '../actions/banksActions'
+} from '../actions/banksActions';
 
-const DOMAIN = "https://glacial-dusk-89024.herokuapp.com"
+const DOMAIN = "https://glacial-dusk-89024.herokuapp.com";
 
 export function* watchFetchBanks() {
   yield takeLatest(FETCH_BANKS, fetchBanksAsync);
@@ -14,20 +14,20 @@ export function* watchFetchBanks() {
 
 function* fetchBanksAsync () {
   try {
-    yield put (fetchBanksBegin())
+    yield put (fetchBanksBegin());
     const data = yield call ( () =>
       fetch(`${DOMAIN}/api/v1/exchanges/now`)
         .then( res => res.json())
-    )
+    );
     // sanitize data to match with Bank PropTypes
     data.banks.forEach( bank => {
-      bank.sell = bank.sell['$numberDecimal']
-      bank.buy = bank.buy['$numberDecimal']
+      bank.sell = bank.sell['$numberDecimal'];
+      bank.buy = bank.buy['$numberDecimal'];
     });
-    data.createdAt = new Date(data.createdAt).toString()
+    data.createdAt = new Date(data.createdAt).toString();
 
-    yield put (fetchBanksSuccess(data))
+    yield put (fetchBanksSuccess(data));
   } catch (error) {
-    yield put (fetchBanksFailure())
+    yield put (fetchBanksFailure());
   }
 }

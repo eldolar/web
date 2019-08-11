@@ -5,9 +5,9 @@ import { fetchBanks } from './../actions/banksActions';
 // react-redux
 const mapDispatchToProps = dispatch => {
   return {
-    refresh: () => { dispatch( fetchBanks() ) },
-  }
-}
+    refresh: () => { dispatch( fetchBanks() ); },
+  };
+};
 
 export default connect(
   null,

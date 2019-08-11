@@ -8,7 +8,7 @@ const store = {
   dispatch: () => {},
   subscribe: () => {},
   getState: () => ({})
-}
+};
 
 storiesOf('Navbar', module)
   .addDecorator(story => (
@@ -16,4 +16,4 @@ storiesOf('Navbar', module)
       <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>
     </Provider>
   ))
-  .add('default', () => <Navbar updatedAt={ new Date().toString() } />)
+  .add('default', () => <Navbar updatedAt={ new Date().toString() } />);

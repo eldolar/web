@@ -9,11 +9,11 @@ function BankList({ loading, banks }) {
       <div className={styles.loadingBox}>
         <h1>Cargando</h1>
       </div>
-    )
+    );
   }
 
   if (banks.length === 0) {
-    return <h1 className={styles.no_data}>No hay información</h1>
+    return <h1 className={styles.no_data}>No hay información</h1>;
   }
 
   return (

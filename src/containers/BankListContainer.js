@@ -6,30 +6,30 @@ import { fetchBanks } from './../actions/banksActions';
 class BankListContainer extends React.Component {
   componentDidMount() {
     if (this.props.banks.length === 0)
-      this.props.fetchBanks()
+      this.props.fetchBanks();
   }
 
   render() {
-    const { loading, banks } = this.props
+    const { loading, banks } = this.props;
     return(
       <BankList loading={loading} banks={banks}/>
-    )
+    );
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchBanks: () => { dispatch( fetchBanks() ) },
-  }
-}
+    fetchBanks: () => { dispatch( fetchBanks() ); },
+  };
+};
 
 // react-redux
 const mapStateToProps = state => {
   return {
     loading: state.loading,
     banks: state.banks
-  }
-}
+  };
+};
 
 export default connect(
   mapStateToProps,

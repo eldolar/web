@@ -5,4 +5,4 @@ import ToggleTheme from './ToggleTheme';
 
 storiesOf('ToggleTheme', module)
   .add('default', () => <ToggleTheme />)
-  .add('dark', () => <ToggleTheme />)
+  .add('dark', () => <ToggleTheme />);

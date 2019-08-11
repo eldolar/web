@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Refresh from '../containers/RefreshContainer';
 import styles from '../styles/Navbar.module.scss';
@@ -23,14 +23,14 @@ const Navbar = ({ updatedAt }) => (
       </li>
     </ul>
   </nav>
-)
+);
 
 Navbar.propTypes = {
   updatedAt: PropTypes.string
-}
+};
 
 Navbar.defaultProps = {
   updatedAt: ''
 };
 
-export default Navbar
+export default Navbar;

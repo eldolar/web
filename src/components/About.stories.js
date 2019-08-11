@@ -4,5 +4,5 @@ import { storiesOf } from '@storybook/react';
 import About from './About';
 
 storiesOf('About', module)
-  .add('default', () => <About />)
+  .add('default', () => <About />);
 
