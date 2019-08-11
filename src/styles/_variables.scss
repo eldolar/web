@@ -1,6 +1,6 @@
 html {
   --bg: #fff;
-  --bg2: rgba(151, 109, 208, .1);
+  --bg2: rgb(237, 224, 255);
   --text: #976DD0;
   --number: #5A6978;
   --number-ligther: black;
@@ -9,7 +9,7 @@ html {
 // dark theme
 html[data-theme="dark"] {
   --bg: #171717;
-  --bg2: rgba(23, 23, 23, .8);
+  --bg2: rgb(17, 9, 27);
   --text: #976DD0;
   --number: white;
   --number-ligther: yellow;
