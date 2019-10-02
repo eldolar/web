@@ -8,15 +8,6 @@ const Footer = () => (
   <footer className={styles.footer}>
     <ul>
       <li>
-        <a href="https://twitter.com/edudepetris">
-          <IcomoonReact
-            iconSet={iconSet}
-            color={base.number}
-            size={25}
-            icon="twitter" />
-        </a>
-      </li>
-      <li>
         <a href="https://github.com/eldolar/web">
           <IcomoonReact
             iconSet={iconSet}
