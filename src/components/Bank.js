@@ -10,12 +10,12 @@ export default function Bank({ bank: { name, sell, buy } }) {
       <h1 className={styles.name}>{name}</h1>
       <div className={styles.exchange}>
         <p>
-          Venta
-          <span>{sell}</span>
-        </p>
-        <p>
           Compra
           <span>{buy}</span>
+        </p>
+        <p>
+          Venta
+          <span>{sell}</span>
         </p>
       </div>
     </div>
