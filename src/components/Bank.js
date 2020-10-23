@@ -5,6 +5,10 @@ import styles from '../styles/Bank.module.scss';
 export default function Bank({ bank: { name, sell, buy, url } }) {
   const noData = hasExchange(sell, buy) ? '' : `${styles.no_data}`;
   const mainClasses = `${styles.box} ${noData}`;
+
+  console.log('Precio de Venta: ' + sell);
+  console.log('Precio de Compra: ' + buy);
+
   return (
     <div className={mainClasses} data-test='bank-box'>
       <h1 className={styles.name} onClick={ () => window.open(url, '_blank') }>
@@ -12,13 +16,14 @@ export default function Bank({ bank: { name, sell, buy, url } }) {
       </h1>
       <div className={styles.exchange}>
         <p>
-          Compra
-          <span>{buy}</span>
+          Venta
+          <span>{currencyFormat(sell)}</span>
         </p>
         <p>
-          Venta
-          <span>{sell}</span>
+          Compra
+          <span>{currencyFormat(buy)}</span>
         </p>
+
       </div>
     </div>
   );
@@ -33,6 +38,12 @@ function hasExchange(sell, buy) {
   }
 
   return true;
+}
+
+function currencyFormat(price) {
+  const parsePrice = Number.parseFloat(price).toFixed(2);
+
+  return `$${parsePrice}`.replace('.' , ',')
 }
 
 Bank.propTypes = {
