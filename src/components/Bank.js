@@ -6,9 +6,6 @@ export default function Bank({ bank: { name, sell, buy, url } }) {
   const noData = hasExchange(sell, buy) ? '' : `${styles.no_data}`;
   const mainClasses = `${styles.box} ${noData}`;
 
-  console.log('Precio de Venta: ' + sell);
-  console.log('Precio de Compra: ' + buy);
-
   return (
     <div className={mainClasses} data-test='bank-box'>
       <h1 className={styles.name} onClick={ () => window.open(url, '_blank') }>
