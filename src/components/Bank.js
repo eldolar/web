@@ -38,9 +38,9 @@ function hasExchange(sell, buy) {
 }
 
 function currencyFormat(price) {
-  const parsePrice = Number.parseFloat(price).toFixed(2);
+  const parsePrice = Number.parseFloat(price);
 
-  return `$${parsePrice}`.replace('.' , ',')
+  return parsePrice.toLocaleString('es-AR', { currency: 'ARS', style: 'currency' });
 }
 
 Bank.propTypes = {
