@@ -40,6 +40,6 @@ Bank.propTypes = {
     name: PropTypes.string.isRequired,
     sell: PropTypes.string,
     buy: PropTypes.string,
-    url: PropTypes.string
+    url: PropTypes.string,
   })
 };
