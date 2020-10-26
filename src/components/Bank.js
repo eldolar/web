@@ -8,8 +8,8 @@ export default function Bank({ bank: { name, sell, buy, url } }) {
   return (
     <div className={mainClasses} data-test='bank-box'>
       <h1 className={styles.name} onClick={ () => window.open(url, '_blank') }>
-      {name}
-       </h1>
+        {name}
+      </h1>
       <div className={styles.exchange}>
         <p>
           Venta
