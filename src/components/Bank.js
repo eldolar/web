@@ -12,12 +12,16 @@ export default function Bank({ bank: { name, sell, buy, url } }) {
       </h1>
       <div className={styles.exchange}>
         <p>
+          Compra
+          <span>{buy}</span>
+        </p>
+        <p>
           Venta
           <span>{sell}</span>
         </p>
         <p>
-          Compra
-          <span>{buy}</span>
+          Dolar Tarjeta
+          <span>{calculateTaxes(sell)}</span>
         </p>
       </div>
     </div>
@@ -33,6 +37,16 @@ function hasExchange(sell, buy) {
   }
 
   return true;
+}
+
+function calculateTaxes(price) {
+  const VAT = 21;
+  const SERVICES_TAXES = 8;
+  const PROFITS_TAXES = 35;
+  const TAXES = VAT + SERVICES_TAXES + PROFITS_TAXES;
+  const priceFloat = Number.parseFloat(price);
+
+  return priceFloat + priceFloat * TAXES / 100;
 }
 
 Bank.propTypes = {
