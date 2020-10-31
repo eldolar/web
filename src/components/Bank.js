@@ -2,12 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from '../styles/Bank.module.scss';
 
-export default function Bank({ bank: { name, sell, buy } }) {
+export default function Bank({ bank: { name, sell, buy, url } }) {
   const noData = hasExchange(sell, buy) ? '' : `${styles.no_data}`;
   const mainClasses = `${styles.box} ${noData}`;
   return (
     <div className={mainClasses} data-test='bank-box'>
-      <h1 className={styles.name}>{name}</h1>
+      <h1 className={styles.name} onClick={ () => window.open(url, '_blank') }>
+        {name}
+      </h1>
       <div className={styles.exchange}>
         <p>
           Venta
@@ -37,6 +39,7 @@ Bank.propTypes = {
   bank: PropTypes.shape({
     name: PropTypes.string.isRequired,
     sell: PropTypes.string,
-    buy: PropTypes.string
+    buy: PropTypes.string,
+    url: PropTypes.string,
   })
 };
