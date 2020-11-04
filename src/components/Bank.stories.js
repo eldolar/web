@@ -6,7 +6,8 @@ import Bank from './Bank';
 export const bank = {
   name: 'Santander Rio',
   buy: '40.56',
-  sell: '43.04'
+  sell: '43.04',
+  url: 'https://bit.ly/2HpmlGE'
 };
 
 const zeroBank = Object.assign({}, bank, { buy: '0', sell: '0' });
