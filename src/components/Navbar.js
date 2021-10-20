@@ -1,16 +1,16 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import Refresh from '../containers/RefreshContainer';
-import styles from '../styles/Navbar.module.scss';
+import React from "react";
+import { NavLink } from "react-router-dom";
+import Refresh from "../containers/RefreshContainer";
+import styles from "../styles/Navbar.module.scss";
 
-import PropTypes from 'prop-types';
-import ToggleTheme from './ToggleTheme';
+import PropTypes from "prop-types";
+import ToggleTheme from "./ToggleTheme";
 
 const Navbar = ({ updatedAt }) => (
   <nav className={styles.navigation}>
     <p>
       <span>Actualizado: </span>
-      { updatedAt }
+      {updatedAt}
       <Refresh />
       <ToggleTheme />
     </p>
@@ -19,18 +19,18 @@ const Navbar = ({ updatedAt }) => (
         <NavLink to="/">Inicio</NavLink>
       </li>
       <li>
-        <NavLink to="/about">Sobre</NavLink>
+        <a href="https://stats.uptimerobot.com/wjJZJfGPGY">Status</a>
       </li>
     </ul>
   </nav>
 );
 
 Navbar.propTypes = {
-  updatedAt: PropTypes.string
+  updatedAt: PropTypes.string,
 };
 
 Navbar.defaultProps = {
-  updatedAt: ''
+  updatedAt: "",
 };
 
 export default Navbar;
