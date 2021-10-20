@@ -1,9 +1,8 @@
-🤷‍♂️ Disclaimer
+![Test](https://github.com/eldolar/web/actions/workflows/main.yml/badge.svg)
 
-:warning: Just use this cutting edge tool in this [area][1]
+🤷‍♂️ Disclaimer :warning: Just use this cutting edge tool in this [area][1]
 
 [1]:https://www.google.com/maps/place/R%C3%ADo+Cuarto,+Cordoba/@-33.1244019,-64.377209,13z/data=!3m1!4b1!4m5!3m4!1s0x95d2000fbdd02247:0xc58d0a705d7cc0e3!8m2!3d-33.1231585!4d-64.3493441
-
 
 ---------
 
